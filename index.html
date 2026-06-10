@@ -1,8 +1,596 @@
 <!DOCTYPE html>
-<html>
-<head><title>Sneha - Portfolio Test</title></head>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- ============================================================
+     PRIMARY SEO META
+     ============================================================ -->
+<title>Sneha Rampur | Purple Team &amp; Offensive Security Engineer</title>
+<meta name="description" content="Sneha Rampur — Purple Team &amp; Offensive Security Engineer in Bengaluru with 5+ years across adversary emulation, MITRE ATT&amp;CK, breach &amp; attack simulation (BAS), detection engineering and SIEM. Threat-informed defense that closes gaps, not just documents them." />
+<meta name="author" content="Sneha Rampur" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Sneha Rampur, Purple Team Engineer, Offensive Security, Adversary Emulation, MITRE ATT&amp;CK, Breach and Attack Simulation, BAS, MITRE Caldera, Atomic Red Team, Infection Monkey, Cymulate, Detection Engineering, SIEM, ArcSight, Threat Hunting, Threat Intelligence, APT Emulation, Trellix EDR, SOC, Penetration Testing, CPTS, Threat-Informed Defense, Cybersecurity, Bengaluru" />
+<link rel="canonical" href="https://your-domain.com/" />
+<meta name="theme-color" content="#1591DC" />
+
+<!-- Fonts: Sora (headings) · Inter (body) · JetBrains Mono (code/tech) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Open Graph (LinkedIn, Facebook, Slack link previews) -->
+<meta property="og:type" content="profile" />
+<meta property="og:title" content="Sneha Rampur | Purple Team &amp; Offensive Security Engineer" />
+<meta property="og:description" content="Adversary emulation, MITRE ATT&amp;CK, breach &amp; attack simulation and detection engineering. Threat-informed defense." />
+<meta property="og:url" content="https://your-domain.com/" />
+<meta property="og:image" content="https://your-domain.com/preview.png" />
+<meta property="profile:first_name" content="Sneha" />
+<meta property="profile:last_name" content="Rampur" />
+
+<!-- Twitter / X card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Sneha Rampur | Purple Team &amp; Offensive Security Engineer" />
+<meta name="twitter:description" content="Adversary emulation, MITRE ATT&amp;CK, BAS and detection engineering. Threat-informed defense." />
+<meta name="twitter:image" content="https://your-domain.com/preview.png" />
+
+<!-- Structured data: helps Google show a rich "Person" knowledge result -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sneha Rampur",
+  "jobTitle": "Purple Team & Offensive Security Engineer",
+  "description": "Security engineer specializing in adversary emulation, MITRE ATT&CK, breach & attack simulation and detection engineering — threat-informed defense.",
+  "url": "https://your-domain.com/",
+  "email": "mailto:sneharampur39@gmail.com",
+  "telephone": "+91-7795072436",
+  "address": { "@type": "PostalAddress", "addressLocality": "Bengaluru", "addressCountry": "India" },
+  "worksFor": { "@type": "Organization", "name": "Ericsson Global Pvt Ltd" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Acharya Institute of Technology, Bengaluru" },
+  "knowsAbout": [
+    "Purple Teaming","Adversary Emulation","MITRE ATT&CK","Breach and Attack Simulation",
+    "Detection Engineering","SIEM","ArcSight","Threat Hunting","Threat Intelligence",
+    "Offensive Security","Active Directory Exploitation","Trellix EDR","SOC Operations"
+  ],
+  "knowsLanguage": ["English","Kannada","Hindi","Telugu"],
+  "sameAs": [ "https://www.linkedin.com/in/sneha-rampur-444115104" ]
+}
+</script>
+
+<style>
+  /* ===========================================================
+     THEME PALETTE  (requested colors)
+     =========================================================== */
+  :root{
+    --navy: #2C5EAD; --blue: #1591DC; --sky: #4BB8FA; --mist: #C4E2F5;
+    --bg: #060b16; --card: #0f1928; --card-2: #14203a; --border: #1d3257;
+    --text: #e8f1fb; --muted: #93acca;
+    --maxw: 1100px; --radius: 16px; --shadow: 0 18px 50px -18px rgba(21,145,220,.45);
+    --font-head: 'Sora', ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-body: 'Inter', ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, "Cascadia Code", Consolas, monospace;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{ font-family:var(--font-body); background:var(--bg); color:var(--text); line-height:1.65; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  a{ color:var(--sky); text-decoration:none; } a:hover{ text-decoration:underline; }
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 22px; }
+  .mono{ font-family:var(--font-mono); }
+
+  /* ---------- ANIMATED BACKGROUND ---------- */
+  #bg-canvas{ position:fixed; inset:0; z-index:-3; display:block; }
+  .grid-layer{ position:fixed; inset:-50%; z-index:-2; pointer-events:none; opacity:.18;
+    background-image: linear-gradient(rgba(75,184,250,.20) 1px, transparent 1px), linear-gradient(90deg, rgba(75,184,250,.20) 1px, transparent 1px);
+    background-size:46px 46px; animation:drift 26s linear infinite; }
+  @keyframes drift{ from{ transform:translate(0,0); } to{ transform:translate(46px,46px); } }
+  .glow-layer{ position:fixed; inset:0; z-index:-2; pointer-events:none;
+    background: radial-gradient(900px 500px at 12% -8%, rgba(75,184,250,.16), transparent 60%),
+      radial-gradient(800px 460px at 100% 0%, rgba(44,94,173,.20), transparent 55%),
+      radial-gradient(1000px 700px at 50% 120%, rgba(21,145,220,.14), transparent 60%); }
+  .scanline{ position:fixed; left:0; right:0; height:140px; z-index:-1; pointer-events:none;
+    background: linear-gradient(180deg, transparent, rgba(75,184,250,.10), transparent); animation:scan 7s linear infinite; }
+  @keyframes scan{ 0%{ top:-160px } 100%{ top:100% } }
+
+  /* ---------- NAV ---------- */
+  header.nav{ position:sticky; top:0; z-index:50; backdrop-filter:blur(10px); background:rgba(6,11,22,.6); border-bottom:1px solid var(--border); }
+  .nav-inner{ display:flex; align-items:center; justify-content:space-between; height:66px; }
+  .brand{ display:flex; align-items:center; gap:10px; font-family:var(--font-head); font-weight:700; letter-spacing:.3px; font-size:1.08rem; }
+  .brand .dot{ width:11px; height:11px; border-radius:50%; background:var(--sky); box-shadow:0 0 14px var(--sky); }
+  .nav-links{ display:flex; gap:24px; }
+  .nav-links a{ color:var(--muted); font-size:.93rem; }
+  .nav-links a:hover{ color:var(--text); text-decoration:none; }
+  .nav-toggle{ display:none; background:none; border:0; color:var(--text); font-size:1.5rem; cursor:pointer; }
+
+  /* ---------- HERO ---------- */
+  .hero{ min-height:calc(100vh - 66px); display:flex; align-items:center; position:relative; }
+  .hero-inner{ width:100%; }
+  .badge{ display:inline-flex; align-items:center; gap:10px; border:1px solid var(--border);
+    background: linear-gradient(180deg, rgba(20,32,58,.75), rgba(15,25,40,.55)); color:var(--mist);
+    padding:9px 16px; border-radius:10px; font-size:.82rem; letter-spacing:.3px; box-shadow:inset 0 1px 0 rgba(255,255,255,.04); }
+  .badge .prompt{ color:var(--sky); font-weight:600; } .badge b{ color:var(--text); font-weight:600; }
+  .hero h1{ font-family:var(--font-head); font-size:clamp(2.8rem,8vw,5.4rem); line-height:1.02; margin:20px 0 12px;
+    font-weight:800; letter-spacing:-1.5px;
+    background: linear-gradient(120deg, #ffffff, var(--sky) 50%, var(--blue));
+    -webkit-background-clip:text; background-clip:text; color:transparent; text-shadow:0 0 40px rgba(75,184,250,.12); }
+  .hero .role{ font-size:clamp(1.05rem,2.6vw,1.5rem); color:var(--sky); font-weight:500; min-height:1.6em; }
+  .hero .role .cursor{ color:var(--sky); animation:blink 1s steps(1) infinite; }
+  @keyframes blink{ 50%{ opacity:0 } }
+  .hero p.lead{ max-width:720px; color:var(--muted); margin-top:18px; font-size:1.08rem; }
+  .hero .loc{ margin-top:14px; color:var(--mist); font-size:.92rem; display:flex; gap:18px; flex-wrap:wrap; }
+  .hero .loc span{ display:inline-flex; align-items:center; gap:7px; }
+  .cta{ display:flex; gap:14px; flex-wrap:wrap; margin-top:30px; }
+  .btn{ display:inline-flex; align-items:center; gap:9px; padding:13px 24px; border-radius:12px; font-weight:600; font-size:.97rem; border:1px solid transparent; cursor:pointer; transition:transform .15s, box-shadow .2s; }
+  .btn:hover{ transform:translateY(-2px); text-decoration:none; }
+  .btn-primary{ background: linear-gradient(120deg,var(--blue),var(--sky)); color:#04101d; box-shadow:var(--shadow); }
+  .btn-ghost{ border-color:var(--border); color:var(--text); background:rgba(15,25,40,.55); }
+  .stats{ display:flex; gap:36px; flex-wrap:wrap; margin-top:48px; }
+  .stat .n{ font-family:var(--font-head); font-size:2rem; font-weight:800; color:var(--sky); }
+  .stat .l{ color:var(--muted); font-size:.82rem; letter-spacing:.4px; text-transform:uppercase; }
+  .scroll-hint{ position:absolute; bottom:24px; left:50%; transform:translateX(-50%); color:var(--muted); font-size:.78rem; letter-spacing:2px; text-transform:uppercase; display:flex; flex-direction:column; align-items:center; gap:8px; }
+  .scroll-hint .mouse{ width:22px; height:34px; border:2px solid var(--border); border-radius:12px; position:relative; }
+  .scroll-hint .mouse::after{ content:""; position:absolute; left:50%; top:7px; width:3px; height:6px; background:var(--sky); border-radius:2px; transform:translateX(-50%); animation:wheel 1.6s infinite; }
+  @keyframes wheel{ 0%{opacity:1; top:7px} 100%{opacity:0; top:18px} }
+
+  /* ---------- SECTION SHELL ---------- */
+  section.block{ padding:70px 0; border-top:1px solid var(--border); position:relative; }
+  .eyebrow{ font-family:var(--font-mono); color:var(--sky); font-size:.78rem; letter-spacing:2px; text-transform:uppercase; font-weight:500; }
+  .h2{ font-family:var(--font-head); font-size:clamp(1.7rem,4vw,2.4rem); margin:10px 0 8px; font-weight:800; letter-spacing:-.5px; }
+  .section-sub{ color:var(--muted); max-width:680px; margin-bottom:34px; }
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{ display:grid; grid-template-columns:1.4fr 1fr; gap:34px; align-items:start; }
+  .about-card{ background: linear-gradient(180deg,var(--card),var(--card-2)); border:1px solid var(--border); border-radius:var(--radius); padding:26px; }
+  .terminal{ background:#05080f; border:1px solid var(--border); border-radius:14px; overflow:hidden; box-shadow:var(--shadow); }
+  .term-bar{ display:flex; gap:8px; padding:12px 14px; border-bottom:1px solid var(--border); }
+  .term-bar i{ width:12px; height:12px; border-radius:50%; display:inline-block; }
+  .term-bar .r{background:#ff5f56}.term-bar .y{background:#ffbd2e}.term-bar .g{background:#27c93f}
+  .term-body{ padding:18px; font-size:.88rem; line-height:1.9; }
+  .term-body .pr{ color:var(--sky); } .term-body .cm{ color:var(--mist); } .term-body .ok{ color:#3ad36a; }
+  .tags{ display:flex; flex-wrap:wrap; gap:8px; margin-top:6px; }
+  .tag{ font-size:.8rem; padding:5px 11px; border-radius:999px; background:rgba(44,94,173,.18); border:1px solid var(--border); color:var(--mist); }
+
+  /* ---------- SKILLS ---------- */
+  .skills-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px; }
+  .skill-card{ background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:22px; transition:transform .18s, border-color .2s; }
+  .skill-card:hover{ transform:translateY(-4px); border-color:var(--sky); }
+  .skill-card h3{ display:flex; align-items:center; gap:10px; font-family:var(--font-head); font-size:1.05rem; margin-bottom:12px; }
+  .skill-card h3 .ic{ width:34px;height:34px;border-radius:9px; display:grid;place-items:center; background:rgba(75,184,250,.14); color:var(--sky); font-size:1.05rem; }
+
+  /* ---------- EXPERIENCE TIMELINE ---------- */
+  .timeline{ position:relative; margin-top:6px; }
+  .timeline::before{ content:""; position:absolute; left:18px; top:8px; bottom:8px; width:2px; background:linear-gradient(var(--blue), rgba(21,145,220,.05)); }
+  .tl-item{ position:relative; padding-left:54px; padding-bottom:36px; }
+  .tl-item:last-child{ padding-bottom:0; }
+  .tl-dot{ position:absolute; left:9px; top:3px; width:20px; height:20px; border-radius:50%; background:var(--card); border:2px solid var(--sky); box-shadow:0 0 14px rgba(75,184,250,.5); display:grid; place-items:center; }
+  .tl-dot::after{ content:""; width:6px; height:6px; border-radius:50%; background:var(--sky); }
+  .tl-head{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; align-items:baseline; }
+  .tl-role{ font-family:var(--font-head); font-weight:700; font-size:1.12rem; }
+  .tl-date{ color:var(--sky); font-family:var(--font-mono); font-size:.82rem; white-space:nowrap; }
+  .tl-org{ color:var(--mist); font-size:.92rem; margin:3px 0 12px; }
+  .tl-item ul{ margin:0 0 0 18px; color:var(--muted); font-size:.93rem; }
+  .tl-item li{ margin-bottom:7px; }
+  .tl-item li b{ color:var(--text); }
+  .tl-note{ color:var(--muted); font-size:.93rem; }
+
+  /* ---------- CERTS ---------- */
+  .cert-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:18px; }
+  .cert{ display:flex; gap:14px; align-items:center; background: linear-gradient(180deg,var(--card),var(--card-2)); border:1px solid var(--border); border-radius:14px; padding:18px; }
+  .cert .seal{ width:48px;height:48px;border-radius:12px; display:grid;place-items:center; background:linear-gradient(135deg,var(--navy),var(--blue)); color:#fff; font-weight:800; font-size:.72rem; text-align:center; line-height:1.1; }
+  .cert h4{ font-family:var(--font-head); font-size:.98rem; }
+  .cert span{ color:var(--muted); font-size:.84rem; }
+  .cert .ip{ color:#ffbd2e; font-size:.74rem; font-family:var(--font-mono); }
+
+  /* ---------- PROJECTS ---------- */
+  .proj-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:20px; }
+  .proj{ background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:24px; display:flex; flex-direction:column; transition:transform .18s,border-color .2s; }
+  .proj:hover{ transform:translateY(-5px); border-color:var(--sky); }
+  .proj .pico{ font-size:1.6rem; } .proj h3{ font-family:var(--font-head); margin:12px 0 8px; font-size:1.14rem; }
+  .proj p{ color:var(--muted); font-size:.93rem; flex:1; }
+
+  /* ---------- EDUCATION / LANGUAGES ---------- */
+  .edu-grid{ display:grid; grid-template-columns:1.3fr 1fr; gap:20px; }
+  .edu-card{ background: linear-gradient(180deg,var(--card),var(--card-2)); border:1px solid var(--border); border-radius:var(--radius); padding:24px; }
+  .edu-card h3{ font-family:var(--font-head); font-size:1.1rem; }
+  .edu-card .meta{ color:var(--mist); font-size:.9rem; margin-top:4px; }
+  .edu-card .yr{ color:var(--sky); font-family:var(--font-mono); font-size:.82rem; }
+
+  /* ---------- CONTACT ---------- */
+  .contact-card{ background: linear-gradient(135deg, rgba(44,94,173,.28), rgba(21,145,220,.12)); border:1px solid var(--border); border-radius:22px; padding:48px; text-align:center; }
+  .socials{ display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-top:26px; }
+  .soc{ display:inline-flex; align-items:center; gap:9px; padding:11px 20px; border-radius:12px; background:var(--card); border:1px solid var(--border); color:var(--text); font-weight:600; font-size:.92rem; transition:transform .15s, border-color .2s; }
+  .soc:hover{ transform:translateY(-3px); border-color:var(--sky); text-decoration:none; }
+
+  footer{ border-top:1px solid var(--border); padding:30px 0; color:var(--muted); font-size:.86rem; text-align:center; }
+  .reveal{ opacity:0; transform:translateY(24px); transition:opacity .6s ease, transform .6s ease; }
+  .reveal.in{ opacity:1; transform:none; }
+
+  /* ---------- INTERACTIVE HOVER GRAPHICS ---------- */
+  .skill-card, .proj, .cert, .about-card, .edu-card, .soc{ position:relative; overflow:hidden; }
+  .skill-card::before, .proj::before, .cert::before{ content:""; position:absolute; inset:0; border-radius:inherit; opacity:0; transition:opacity .35s; pointer-events:none;
+    background: radial-gradient(240px circle at var(--mx,50%) var(--my,50%), rgba(75,184,250,.20), transparent 62%); }
+  .skill-card:hover::before, .proj:hover::before, .cert:hover::before{ opacity:1; }
+  .skill-card::after, .proj::after, .cert::after{ content:""; position:absolute; left:0; top:0; height:2px; width:0; background:linear-gradient(90deg, var(--blue), var(--sky)); transition:width .4s ease; }
+  .skill-card:hover::after, .proj:hover::after, .cert:hover::after{ width:100%; }
+  .skill-card .ic{ transition:transform .25s, background .25s; }
+  .skill-card:hover .ic{ transform:scale(1.12) rotate(-4deg); background:rgba(75,184,250,.26); }
+  .proj .pico{ transition:transform .25s; display:inline-block; }
+  .proj:hover .pico{ transform:translateY(-4px) scale(1.1); }
+  .skill-card:hover, .proj:hover, .cert:hover{ box-shadow:0 14px 40px -20px rgba(75,184,250,.6); }
+
+  @media (max-width: 820px){
+    .about-grid, .edu-grid{ grid-template-columns:1fr; }
+    .nav-links{ position:absolute; top:66px; left:0; right:0; flex-direction:column; gap:0; background:rgba(6,11,22,.98); border-bottom:1px solid var(--border); max-height:0; overflow:hidden; transition:max-height .3s; }
+    .nav-links.open{ max-height:420px; }
+    .nav-links a{ padding:16px 22px; border-top:1px solid var(--border); }
+    .nav-toggle{ display:block; }
+    .scroll-hint{ display:none; }
+  }
+  @media (prefers-reduced-motion: reduce){ .grid-layer,.scanline,.hero .role .cursor,.scroll-hint .mouse::after{ animation:none; } }
+</style>
+</head>
 <body>
-<h1>Hello! This is a test page.</h1>
-<p>If you can see this, GitHub Pages is working.</p>
+
+<!-- ====== ANIMATED OFFSEC BACKGROUND ====== -->
+<canvas id="bg-canvas"></canvas>
+<div class="grid-layer"></div>
+<div class="glow-layer"></div>
+<div class="scanline"></div>
+
+<!-- ======================= NAV ======================= -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <div class="brand"><span class="dot"></span><span>Sneha<span style="color:var(--sky)">.</span>sec</span></div>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#skills">Expertise</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Research</a>
+      <a href="#certs">Certifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+  </div>
+</header>
+
+<!-- ======================= HERO ======================= -->
+<section class="hero">
+  <div class="wrap hero-inner reveal">
+    <span class="badge mono"><span class="prompt">sneha@purpleteam</span>:~# <b>./emulate --apt --map=att&amp;ck</b></span>
+    <h1>Sneha Rampur</h1>
+    <div class="role mono"><span id="typed"></span><span class="cursor">&#9608;</span></div>
+    <p class="lead">
+      Security engineer with <strong>5+ years</strong> across SOC operations, SIEM detection engineering and
+      purple team operations — now focused on <strong>adversary emulation</strong>. I replicate the TTPs of
+      active APT groups, map them to <strong>MITRE ATT&amp;CK</strong>, and measure how well existing detections
+      and endpoint controls hold up. A detection-engineering background means every exercise ends with
+      <strong>gaps closed</strong>, not just documented.
+    </p>
+    <div class="loc mono">
+      <span>&#128205; Bengaluru, India</span>
+      <span>&#9993; sneharampur39@gmail.com</span>
+      <span>&#128222; +91 77950 72436</span>
+    </div>
+    <div class="cta">
+      <a class="btn btn-primary" href="#contact">Get in touch &rarr;</a>
+      <a class="btn btn-ghost" href="#" id="resumeBtn">Download Résumé</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="n">5+</div><div class="l">Years in Security</div></div>
+      <div class="stat"><div class="n">25+</div><div class="l">Detection Rules Authored</div></div>
+      <div class="stat"><div class="n">~30%</div><div class="l">False Positives Cut</div></div>
+      <div class="stat"><div class="n">4+</div><div class="l">BAS Platforms</div></div>
+    </div>
+  </div>
+  <div class="scroll-hint"><div class="mouse"></div><span>Scroll</span></div>
+</section>
+
+<!-- ======================= ABOUT ======================= -->
+<section class="block" id="about">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow">// whoami</div><h2 class="h2">About Me</h2></div>
+    <div class="about-grid">
+      <div class="about-card reveal">
+        <p style="color:var(--muted)">
+          I sit where offense meets defense. My work is <strong>threat-informed</strong>: I track active APT
+          groups, translate their tactics into repeatable, testable attack plans, and run them against real
+          detections and endpoint controls to see what actually fires — and what doesn't.
+        </p>
+        <p style="color:var(--muted); margin-top:14px">
+          Because I came up through SOC and detection engineering, I don't stop at "the attack succeeded." I
+          tune the rules, close the coverage gaps, and cut false positives so the blue team is genuinely
+          stronger after every exercise. I'm experienced across BAS platforms — MITRE Caldera, Atomic Red
+          Team, Infection Monkey and Cymulate — and I'm currently building my own BAS framework.
+        </p>
+        <div class="tags" style="margin-top:18px">
+          <span class="tag">Adversary Emulation</span><span class="tag">MITRE ATT&amp;CK</span>
+          <span class="tag">Breach &amp; Attack Simulation</span><span class="tag">Detection Engineering</span>
+          <span class="tag">Threat Hunting</span><span class="tag">Threat Intelligence</span>
+        </div>
+      </div>
+      <div class="terminal reveal">
+        <div class="term-bar"><i class="r"></i><i class="y"></i><i class="g"></i></div>
+        <div class="term-body mono">
+          <div><span class="pr">sneha@purpleteam</span>:~$ whoami</div>
+          <div class="cm">purple_team_engineer</div>
+          <div><span class="pr">sneha@purpleteam</span>:~$ cat focus.txt</div>
+          <div class="cm">adversary_emulation · detection_eng</div>
+          <div><span class="pr">sneha@purpleteam</span>:~$ ./status --check</div>
+          <div class="ok">[+] approach....... threat-informed</div>
+          <div class="ok">[+] att&amp;ck......... mapped</div>
+          <div class="ok">[+] gaps........... closed, not just logged</div>
+          <div class="ok">[+] team color..... purple</div>
+          <div><span class="pr">sneha@purpleteam</span>:~$ <span style="animation:blink 1s steps(1) infinite">_</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= EXPERTISE / SKILLS ======================= -->
+<section class="block" id="skills">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow">// core competencies</div><h2 class="h2">Expertise &amp; Tooling</h2>
+      <p class="section-sub">Where offensive technique and defensive engineering meet.</p></div>
+    <div class="skills-grid">
+      <div class="skill-card reveal"><h3><span class="ic">&#9876;</span> Adversary Emulation &amp; Purple Team</h3>
+        <div class="tags"><span class="tag">APT TTP Emulation</span><span class="tag">MITRE ATT&amp;CK Mapping</span><span class="tag">Purple Team Exercise Design</span><span class="tag">Detection Gap Analysis</span><span class="tag">Threat-Informed Defense</span></div></div>
+      <div class="skill-card reveal"><h3><span class="ic">&#129514;</span> BAS &amp; Emulation Tooling</h3>
+        <div class="tags"><span class="tag">MITRE Caldera</span><span class="tag">Atomic Red Team</span><span class="tag">Infection Monkey</span><span class="tag">Cymulate</span></div></div>
+      <div class="skill-card reveal"><h3><span class="ic">&#128737;</span> Offensive Security</h3>
+        <div class="tags"><span class="tag">Active Directory Exploitation</span><span class="tag">Lateral Movement</span><span class="tag">Privilege Escalation</span><span class="tag">Web App Attacks</span><span class="tag">Pivoting &amp; Tunneling</span><span class="tag">Post-Exploitation</span></div></div>
+      <div class="skill-card reveal"><h3><span class="ic">&#128270;</span> Threat Intelligence</h3>
+        <div class="tags"><span class="tag">APT Group Tracking</span><span class="tag">TTP Analysis</span><span class="tag">CrowdStrike &amp; Multi-Vendor Feeds</span><span class="tag">IOC / IOA Development</span></div></div>
+      <div class="skill-card reveal"><h3><span class="ic">&#128202;</span> Detection Engineering &amp; SIEM</h3>
+        <div class="tags"><span class="tag">Micro Focus ArcSight</span><span class="tag">Correlation Rule Design</span><span class="tag">Use Case Development</span><span class="tag">Threat Hunting</span><span class="tag">Log Analysis</span></div></div>
+      <div class="skill-card reveal"><h3><span class="ic">&#128421;</span> Endpoint &amp; EDR</h3>
+        <div class="tags"><span class="tag">Trellix EDR</span><span class="tag">Telemetry Analysis</span><span class="tag">Detection Validation &amp; Tuning</span></div></div>
+      <div class="skill-card reveal"><h3><span class="ic">&#128680;</span> SOC Operations</h3>
+        <div class="tags"><span class="tag">Incident Triage</span><span class="tag">Brute-Force &amp; Anomaly Detection</span><span class="tag">Dashboards</span><span class="tag">Escalation Handling</span></div></div>
+      <div class="skill-card reveal"><h3><span class="ic">&#9729;</span> Cloud, OS &amp; Process</h3>
+        <div class="tags"><span class="tag">Azure (AZ-900)</span><span class="tag">Linux</span><span class="tag">Windows</span><span class="tag">AIX / Solaris</span><span class="tag">ITIL</span><span class="tag">ServiceNow</span><span class="tag">SQL</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= EXPERIENCE ======================= -->
+<section class="block" id="experience">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow">// career log</div><h2 class="h2">Experience</h2>
+      <p class="section-sub">5+ years from SOC and infrastructure monitoring to detection engineering and purple team operations.</p></div>
+    <div class="timeline reveal">
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-head"><div class="tl-role">IT Security Engineer — Purple Team</div><div class="tl-date">Sep 2022 – Present</div></div>
+        <div class="tl-org">Ericsson Global Pvt Ltd · Bengaluru, India</div>
+        <ul>
+          <li>Design and execute <b>purple team exercises emulating multi-stage APT campaigns</b>, replicating real-world TTPs across the attack lifecycle and mapping each to MITRE ATT&amp;CK to measure detection and response coverage.</li>
+          <li>Build adversary emulation scenarios with <b>MITRE Caldera, Atomic Red Team, Infection Monkey and Cymulate</b>, turning threat intel on active APT groups into repeatable, testable attack plans.</li>
+          <li>Validate <b>Trellix EDR</b> by analyzing telemetry from emulated attacks, identifying coverage gaps and tuning detections to close them.</li>
+          <li>Authored <b>25+ ArcSight correlation rules</b> (brute-force, privilege misuse, lateral movement) and tuned existing rule sets to <b>cut false positives by ~30%</b>.</li>
+          <li>Built ArcSight dashboards used by SOC analysts and managers for daily situational awareness and weekly threat reviews.</li>
+          <li>Partnered with IR and infrastructure teams during active investigations, contributing log evidence and timeline reconstruction that shortened resolution windows.</li>
+          <li>Documented detection logic, emulation playbooks, runbooks and analyst SOPs now used for onboarding and shift handovers.</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-head"><div class="tl-role">Career Break</div><div class="tl-date">Sep 2020 – Sep 2022</div></div>
+        <div class="tl-org">Maternity &amp; family break</div>
+        <p class="tl-note">Planned family career break. Stayed current with security research, threat-intelligence developments and offensive security study throughout.</p>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-head"><div class="tl-role">System Engineer</div><div class="tl-date">Nov 2019 – Sep 2020</div></div>
+        <div class="tl-org">Orient Echo Systems Pvt Ltd · Bengaluru, India</div>
+        <ul>
+          <li>Monitored network and system infrastructure for a large enterprise client, resolving confirmed security events within SLA and producing detailed Security Event Notification tickets.</li>
+          <li>Performed <b>vulnerability assessments</b> across software, hardware and network layers; several recommended countermeasures were adopted into the standard hardening baseline.</li>
+          <li>Operated IBM Tivoli monitoring (ITM 6.3, TCM, ITCAM) and built custom monitoring that improved coverage on previously unmonitored services.</li>
+          <li>Followed ITIL Incident, Problem and Change Management, consistently meeting SLAs.</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-head"><div class="tl-role">System Engineer</div><div class="tl-date">Nov 2017 – Oct 2019</div></div>
+        <div class="tl-org">Infy Cloud · Bengaluru, India</div>
+        <ul>
+          <li>Handled steady-state SOC and monitoring activities including service requests, Severity 1–3 incidents and root-cause analysis for cloud infrastructure customers.</li>
+          <li>Commissioned/decommissioned Tivoli Endpoint Agents across hundreds of servers, maintaining inventory accuracy through weekly reporting and aging cycles.</li>
+          <li>Tuned monitoring thresholds across Wintel, Linux, AIX and Solaris, reducing false alarms in daily operations.</li>
+          <li>Installed, upgraded and health-checked Tivoli components (HTEMS, RTEMS, TEPS, ITM/ITCAM) with no production downtime during scheduled windows.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======================= PROJECTS / RESEARCH ======================= -->
+<section class="block" id="projects">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow">// projects &amp; threat research</div><h2 class="h2">Projects &amp; Research</h2>
+      <p class="section-sub">Where I push beyond the day job.</p></div>
+    <div class="proj-grid">
+      <div class="proj reveal"><div class="pico">&#129302;</div><h3>Custom BAS Framework</h3>
+        <p>Building a breach &amp; attack simulation framework to automate adversary emulation, run ATT&amp;CK-mapped test cases, and continuously validate detection coverage.</p></div>
+      <div class="proj reveal"><div class="pico">&#128373;</div><h3>APT Group Tracking</h3>
+        <p>Active tracking of APT groups and their evolving tactics, techniques and procedures — feeding fresh emulation scenarios.</p></div>
+      <div class="proj reveal"><div class="pico">&#128225;</div><h3>Threat Intelligence Monitoring</h3>
+        <p>Following threat-intelligence reporting and feeds from multiple vendors, including CrowdStrike, to keep detections aligned with the current threat landscape.</p></div>
+      <div class="proj reveal"><div class="pico">&#128218;</div><h3>Continuous Self-Study</h3>
+        <p>Ongoing study in adversary emulation, offensive security and detection engineering — currently working toward the HackTheBox CPTS.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CERTIFICATIONS ======================= -->
+<section class="block" id="certs">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow">// credentials</div><h2 class="h2">Certifications</h2></div>
+    <div class="cert-grid">
+      <div class="cert reveal"><div class="seal">CPTS</div><div><h4>HackTheBox CPTS</h4><span>Certified Penetration Testing Specialist</span><br><span class="ip">In Progress</span></div></div>
+      <div class="cert reveal"><div class="seal">BAS</div><div><h4>AttackIQ</h4><span>Foundations of Breach &amp; Attack Simulation</span></div></div>
+      <div class="cert reveal"><div class="seal">PURPLE</div><div><h4>AttackIQ</h4><span>Foundations of Purple Team Exercises</span></div></div>
+      <div class="cert reveal"><div class="seal">ATT&amp;CK</div><div><h4>AttackIQ</h4><span>Foundations of MITRE ATT&amp;CK</span></div></div>
+      <div class="cert reveal"><div class="seal">AZ-900</div><div><h4>Microsoft Azure Fundamentals</h4><span>Microsoft Certified: AZ-900</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= EDUCATION / LANGUAGES ======================= -->
+<section class="block" id="education">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow">// background</div><h2 class="h2">Education &amp; Languages</h2></div>
+    <div class="edu-grid">
+      <div class="edu-card reveal">
+        <div class="yr">2015</div>
+        <h3>Bachelor of Engineering</h3>
+        <div class="meta">Acharya Institute of Technology · Bengaluru, India</div>
+      </div>
+      <div class="edu-card reveal">
+        <h3>Languages</h3>
+        <div class="tags" style="margin-top:12px">
+          <span class="tag">English</span><span class="tag">Kannada</span><span class="tag">Hindi</span><span class="tag">Telugu</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CONTACT ======================= -->
+<section class="block" id="contact">
+  <div class="wrap reveal">
+    <div class="contact-card">
+      <div class="eyebrow">// establish connection</div>
+      <h2 class="h2">Let's Work Together</h2>
+      <p style="color:var(--mist); max-width:580px; margin:8px auto 0">
+        Purple team exercises, adversary emulation, detection engineering or BAS — let's talk about making
+        your defenses provably stronger.
+      </p>
+      <div class="socials">
+        <a class="soc" href="mailto:sneharampur39@gmail.com">&#9993; Email</a>
+        <a class="soc" href="tel:+917795072436">&#128222; +91 77950 72436</a>
+        <a class="soc" href="https://www.linkedin.com/in/sneha-rampur-444115104" target="_blank" rel="noopener">&#128188; LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">&copy; <span id="year"></span> Sneha Rampur — Purple Team &amp; Offensive Security Engineer · Bengaluru, India</div></footer>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const links  = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* typewriter role */
+  const roles = [
+    '> Purple Team Engineer',
+    '> Adversary Emulation Specialist',
+    '> Detection Engineer',
+    '> Threat-Informed Defender',
+    '> Offensive Security Engineer'
+  ];
+  const typed = document.getElementById('typed');
+  let ri = 0, ci = 0, deleting = false;
+  function tick(){
+    const full = roles[ri];
+    typed.textContent = full.slice(0, ci);
+    if(!deleting && ci < full.length){ ci++; setTimeout(tick, 55); }
+    else if(!deleting && ci === full.length){ deleting = true; setTimeout(tick, 1600); }
+    else if(deleting && ci > 2){ ci--; setTimeout(tick, 28); }
+    else { deleting = false; ri = (ri + 1) % roles.length; setTimeout(tick, 250); }
+  }
+  tick();
+
+  /* scroll reveal */
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  /* cursor spotlight on cards */
+  document.querySelectorAll('.skill-card, .proj, .cert').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+      card.style.setProperty('--my', (e.clientY - r.top)  + 'px');
+    });
+  });
+
+  /* résumé placeholder */
+  document.getElementById('resumeBtn').addEventListener('click', (e) => {
+    e.preventDefault();
+    alert('Place your resume PDF next to index.html (e.g. Sneha_Rampur_Resume.pdf) and point this button at it: href="Sneha_Rampur_Resume.pdf".');
+  });
+
+  /* ====== OFFSEC BACKGROUND: live "network recon" particle mesh ====== */
+  (function(){
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const canvas = document.getElementById('bg-canvas');
+    const ctx = canvas.getContext('2d');
+    let w, h, dpr, nodes = [], raf = null;
+    const mouse = { x: -9999, y: -9999 };
+    const PALETTE = { line:'21,145,220', dot:'75,184,250' };
+
+    function resize(){
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      w = canvas.width  = Math.floor(innerWidth  * dpr);
+      h = canvas.height = Math.floor(innerHeight * dpr);
+      canvas.style.width = innerWidth + 'px';
+      canvas.style.height = innerHeight + 'px';
+      const target = Math.min(110, Math.floor((innerWidth * innerHeight) / 14000));
+      nodes = Array.from({length: target}, () => ({
+        x: Math.random()*w, y: Math.random()*h,
+        vx: (Math.random()-.5)*0.35*dpr, vy: (Math.random()-.5)*0.35*dpr,
+        r: (Math.random()*1.6 + 1)*dpr
+      }));
+    }
+    function step(){
+      ctx.clearRect(0,0,w,h);
+      const linkDist = 130*dpr, mouseDist = 170*dpr;
+      for(let i=0;i<nodes.length;i++){
+        const n = nodes[i];
+        n.x += n.vx; n.y += n.vy;
+        if(n.x < 0 || n.x > w) n.vx *= -1;
+        if(n.y < 0 || n.y > h) n.vy *= -1;
+        for(let j=i+1;j<nodes.length;j++){
+          const m = nodes[j], dx = n.x-m.x, dy = n.y-m.y, d = Math.hypot(dx,dy);
+          if(d < linkDist){
+            ctx.strokeStyle = `rgba(${PALETTE.line},${(1 - d/linkDist)*0.22})`;
+            ctx.lineWidth = dpr*0.6;
+            ctx.beginPath(); ctx.moveTo(n.x,n.y); ctx.lineTo(m.x,m.y); ctx.stroke();
+          }
+        }
+        const mdx = n.x-mouse.x*dpr, mdy = n.y-mouse.y*dpr, md = Math.hypot(mdx,mdy);
+        if(md < mouseDist){
+          ctx.strokeStyle = `rgba(${PALETTE.dot},${(1 - md/mouseDist)*0.45})`;
+          ctx.lineWidth = dpr*0.7;
+          ctx.beginPath(); ctx.moveTo(n.x,n.y); ctx.lineTo(mouse.x*dpr,mouse.y*dpr); ctx.stroke();
+        }
+        ctx.fillStyle = `rgba(${PALETTE.dot},0.85)`;
+        ctx.beginPath(); ctx.arc(n.x,n.y,n.r,0,Math.PI*2); ctx.fill();
+      }
+      raf = requestAnimationFrame(step);
+    }
+    function start(){ if(!raf && !reduce) step(); }
+    function stop(){ if(raf){ cancelAnimationFrame(raf); raf = null; } }
+    addEventListener('resize', resize);
+    addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; });
+    addEventListener('mouseleave', () => { mouse.x = mouse.y = -9999; });
+    document.addEventListener('visibilitychange', () => document.hidden ? stop() : start());
+    resize();
+    if(reduce){ step(); stop(); } else start();
+  })();
+</script>
 </body>
 </html>
